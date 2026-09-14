@@ -1,5 +1,10 @@
-//Viết chương trình giải phương trình bậc 2 trong C. Phương trình bậc 2 có dạng:
-//ax^2 + bx + c = 0
+/*Viết chương trình giải phương trình bậc 2 trong C. Phương trình bậc 2 có dạng: ax^2 + bx + c = 0
+Kết quả:
+Nhap he so bac 2, a = 2
+Nhap he so bac 1, b = 3
+Nhap so hang tu do, c = 1
+Phuong trinh co 2 nghiem la: x1 = -0.500000 va x2 = -1.000000
+*/
 
 #include <stdio.h>
 #include <math.h>
