@@ -2,16 +2,42 @@
 //ax^2 + bx + c = 0
 
 #include <stdio.h>
+#include <math.h>
 
-void main()
+int main()
 {
     float a, b, c;
+    float delta, x1, x2;
 
-    printf("Nhap he so bac 2: a = \n");
+    do{
+    printf("Nhap he so bac 2: a = ");
     scanf("%f", &a);
-    printf("Nhap he so bac 1: b = \n");
+    }while(a == 0);
+    
+    printf("Nhap he so bac 1: b = ");
     scanf("%f", &b);
-    printf("Nhap he so tu do: a = \n");
+    printf("Nhap he so tu do: c = ");
     scanf("%f", &c);
 
+    delta = (b*b - 4*a*c);
+    printf("Delta = %.2f\n", delta);
+
+    if(delta < 0)
+    {
+        printf("Phuong trinh vo nghiem.\n");
+    }
+    else if(delta == 0)
+    {
+        printf("Phuong trinh co nghiem kep.\n");
+        x1 = x2 = -b / (2*a);
+        printf("x1 = x2 = %f", x1);
+    }
+    else if(delta > 0)
+    {
+        printf("Phuong trinh co 2 nghiem phan biet.\n");
+        x1 = ((-b + sqrt(delta)) / (2*a));
+        x2 = ((-b - sqrt(delta)) / (2*a));
+        printf("x1 = %.2f\nx2 = %.2f\n", x1, x2);
+    }
+    return 0;
 }
