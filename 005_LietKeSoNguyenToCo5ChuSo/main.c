@@ -40,5 +40,6 @@ int main()
         }
     }
     printf("\nTong cac so nguyen to co 5 chu so la: %d",dem);
+    
     return 0;
 }
