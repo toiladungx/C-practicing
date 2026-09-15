@@ -1,0 +1,22 @@
+Cách khác:
+
+Ý tưởng:
+i là số đang xét.
+Thử chia i cho các số từ 2 đến i - 1.
+Nếu tìm được một ước → chắc chắn không phải số nguyên tố → break.
+Nếu không tìm được ước nào → i là số nguyên tố.
+
+for(j = 2; j < i; j++)
+{
+    if(i % j == 0)
+    {
+        uoc++;
+        break;
+    }
+}
+
+if(uoc == 0)
+{
+    printf("%d ", i);
+    dem++;
+}
