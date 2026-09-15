@@ -1,1 +1,5 @@
-*.exe *.txt
+# Bỏ qua toàn bộ file thực thi .exe
+*.exe
+
+# Bỏ qua toàn bộ file văn bản .txt
+*.txt
