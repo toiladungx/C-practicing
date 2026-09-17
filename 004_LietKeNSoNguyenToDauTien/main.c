@@ -13,9 +13,13 @@ Nhập n = 10
 */
 
 #include <stdio.h>
+#include <time.h>
+
+//#define CODE_CU
 
 int main()
 {
+    
     int n, i, j;
     int uoc, dem;
     
@@ -26,25 +30,54 @@ int main()
     scanf("%d", &n);
     }while(n <= 0);
 
+    clock_t start = clock();
+    
     printf("%d so nguyen to dau tien la:\n", n);
 
     for(i = 2; dem < n; i++)
     {
         uoc = 0;
-        for(j = 1; j <= i; j++)
-        {
-            if(i % j == 0)
+        #ifdef CODE_CU
+            for(j = 2; j <= i; j++)
             {
-                uoc++;
+                if((i % j) == 0)
+                {
+                    uoc++;
+                    break;
+                }
             }
-        }
-        
-        if(uoc == 2)
-        {
-            printf("%d ", i);
-            dem++;
-        }
+            
+            if( (uoc == 1) && ((i/j)==1) )
+            {
+                printf("%d ", i);
+                dem++;
+            }
+        #else
+            for(j = 1; j <= i; j++)
+                {
+                    if((i % j) == 0)
+                    {
+                        uoc++;
+                    }
+                }
+                
+                if(uoc == 2)
+                {
+                    printf("%d ", i);
+                    dem++;
+                }
+        #endif
     }
     
+
+
+    // 3. Lưu thời điểm kết thúc
+    clock_t end = clock();
+
+    // 4. Tính toán thời gian thực thi (giây)
+    double cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+
+    printf("\nThoi gian thuc thi: %f ms\n", cpu_time_used * 1000.0);
+
     return 0;
 }
