@@ -15,7 +15,7 @@ Nhập n = 10
 #include <stdio.h>
 #include <time.h>
 
-//#define CODE_CU
+#define CODE_CU
 
 int main()
 {
