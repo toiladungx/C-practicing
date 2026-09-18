@@ -18,20 +18,20 @@ Cac phan tu cua mang:
 
 int main()
 {
-    int i, size;
+    int i, n;
 
     do{
         printf("Nhap so phan tu cua mang: ");
-        scanf("%d", &size);
-    }while(size <= 0);
+        scanf("%d", &n);
+    }while(n <= 0);
 
     #ifdef STATIC   //Static Allocation
     
-    int arr[size];
+    int arr[n];
 
     printf("Nhap cac phan tu cua mang:\n");
     
-    for(i = 0; i < size; i++)
+    for(i = 0; i < n; i++)
     {
         printf("a[%d] = ", i);
         scanf("%d", &arr[i]);
@@ -39,7 +39,7 @@ int main()
 
     printf("Cac phan tu cua mang:\n");
     
-    for(i = 0; i < size; i++)
+    for(i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
@@ -48,21 +48,23 @@ int main()
     
     int* arr_ptr;
 
-    arr_ptr = (int*) malloc(size * sizeof(int));
+    arr_ptr = (int*) malloc(n * sizeof(int));
 
     printf("Nhap cac phan tu cua mang: \n");
     
-    for(i = 0; i < size; i++)
+    for(i = 0; i < n; i++)
     {
         printf("a[%d] = ", i);
         scanf("%d", &arr_ptr[i]);
     }
 
     printf("Cac phan tu cua mang:\n");
-    for(i = 0; i < size; i++)
+    for(i = 0; i < n; i++)
     {
         printf("%d ", arr_ptr[i]);
     }
+    free(arr_ptr);
+
     #endif
 
     return 0;
