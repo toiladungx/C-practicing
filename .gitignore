@@ -3,3 +3,5 @@
 
 # Bỏ qua toàn bộ file văn bản .txt
 *.txt
+
+build/
