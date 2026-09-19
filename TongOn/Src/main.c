@@ -9,6 +9,6 @@
 int main(void) {
     Student *list[MAX_STUDENTS];
     int count = 0;
-    // Cài đặt menu và logic điều hướng...
+    
     return 0;
 }
