@@ -11,7 +11,7 @@
       "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": true,
-      "preLaunchTask": "CMake: compile"
+      "preLaunchTask": "Clean and Rebuild"
     }
   ]
 }

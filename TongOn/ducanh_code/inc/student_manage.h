@@ -3,12 +3,13 @@
 
 #include "student.h"
 
-Student* studentList[MAX_STUDENTS];
+extern Student* studentList[MAX_STUDENTS];
+static int currentTotal;
 
 extern void themSV();
 
 static Student* createStudent(const char *id, const char *name, int age, float gpa);
-static int addStudent(Student *list[], int *count, Student *s);
+static int addStudent(Student *s);
 static int deleteStudentById(Student *list[], int *count, const char *id);
 static void freeAllStudents(Student *list[], int count);
 

@@ -1,5 +1,9 @@
 ﻿#include "student_manage.h"
 
+/* Definitions for globals declared in the header */
+Student* studentList[MAX_STUDENTS];
+int currentTotal = 0;
+
 extern void themSV()
 {
     Student* new_student;
@@ -25,7 +29,14 @@ extern void themSV()
     new_student = createStudent(mssv, ten, tuoi, gpa);
 
     // ok roi thi add vao global list
-    // int addStudent(Student *list[], int *count, Student *s){
+    int ret = addStudent(new_student);
+
+    if(ret == -1){
+        printf("[Error] Danh sach FULL, khong the them!\n");
+        exit(1);
+    }else{
+        printf("Da them thanh cong!\n\n");
+    }
     
 }
 
@@ -47,15 +58,19 @@ static Student* createStudent(const char *id, const char *name, int age, float g
         new_student->gpa = gpa;
     }
 
-
-
 }
 
+static int addStudent(Student *s){
 
-static int addStudent(Student *list[], int *count, Student *s){
+    if(currentTotal == MAX_STUDENTS)
+    return -1;
 
+    // contro phan tu thu currentTotal tro den HEAP chung voi s
+    studentList[currentTotal] = s;
+    currentTotal++;
+
+    return 0;
 }
-
 
 static int deleteStudentById(Student *list[], int *count, const char *id){
 

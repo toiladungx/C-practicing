@@ -36,6 +36,36 @@
       ],
       "problemMatcher": "$msCompile",
       "group": "build"
+    },
+    {
+      "label": "CMake: clean",
+      "type": "shell",
+      "command": "C:/Program Files/CMake/bin/cmake.exe",
+      "args": [
+        "--build",
+        "${workspaceFolder}/build",
+        "--config",
+        "Debug",
+        "--target",
+        "clean"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Clean and Rebuild",
+      "dependsOn": [
+        "CMake: clean",
+        "CMake: compile"
+      ],
+      "dependsOrder": "sequence",
+      "group": "build"
     }
   ]
 }
