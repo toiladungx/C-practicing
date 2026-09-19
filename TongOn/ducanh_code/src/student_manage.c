@@ -25,7 +25,7 @@ extern void themSV()
     new_student = createStudent(mssv, ten, tuoi, gpa);
 
     // ok roi thi add vao global list
-    int addStudent(Student *list[], int *count, Student *s){
+    // int addStudent(Student *list[], int *count, Student *s){
     
 }
 
