@@ -47,7 +47,7 @@ int main(void) {
             case SAP_XEP_SV_OPTION:
                 break;
             case IN_DS_SV_OPTION:
-                inDSSV();
+                inDanhSachSV(svList, &currentTotalSv);
                 break;
             case THOAT_OPTION:
                 break;
