@@ -9,9 +9,15 @@
                 "-g",
                 "-Wall",
                 "-Wextra",
-                "${file}",
+                "-I",
+                "${workspaceFolder}\\TongOn\\Inc",
+                "${workspaceFolder}\\TongOn\\Src\\main.c",
+                "${workspaceFolder}\\TongOn\\Src\\student_manage.c",
+                "${workspaceFolder}\\TongOn\\Src\\student_io.c",
+                "${workspaceFolder}\\TongOn\\Src\\student_search.c",
+                "${workspaceFolder}\\TongOn\\Src\\student_sort.c",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\TongOn\\Src\\main.exe"
             ],
             "group": {
                 "kind": "build",
@@ -47,9 +53,15 @@
                 "-g",
                 "-Wall",
                 "-Wextra",
-                "${file}",
+                "-I",
+                "${workspaceFolder}\\TongOn\\Inc",
+                "${workspaceFolder}\\TongOn\\Src\\main.c",
+                "${workspaceFolder}\\TongOn\\Src\\student_manage.c",
+                "${workspaceFolder}\\TongOn\\Src\\student_io.c",
+                "${workspaceFolder}\\TongOn\\Src\\student_search.c",
+                "${workspaceFolder}\\TongOn\\Src\\student_sort.c",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\TongOn\\Src\\main.exe"
             ],
             "group": "build",
             "presentation": {
