@@ -7,7 +7,7 @@
 void inDanhSachSV(Student* listPtr, int* count)
 {
     
-    printf("ID\tName\t\t\t\tAge\tGPA\n");
+    printf("\nID\tName\t\t\t\tAge\tGPA\n");
     printf("----------------------------------------------------\n");
 
     for(int i = 0; i < (*count); i++)

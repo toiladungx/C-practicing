@@ -16,9 +16,6 @@ int currentTotalSv = 0;
 int currentListIndex = 0;
 
 int main(void) {
-    Student *list[MAX_STUDENTS];
-    int count = 0;
-
 
     int luachon;
 
@@ -41,8 +38,10 @@ int main(void) {
                 themSV(svList, &currentTotalSv, &currentListIndex);
                 break;
             case XOA_SV_OPTION:
+                
                 break;
             case TIM_SV_OPTION:
+                timSV(svList, &currentTotalSv);
                 break;
             case SAP_XEP_SV_OPTION:
                 break;
@@ -50,7 +49,8 @@ int main(void) {
                 inDanhSachSV(svList, &currentTotalSv);
                 break;
             case THOAT_OPTION:
-                break;
+                thoatChtr();
+                return 0;
             default:
                 printf("Nhap so tu 1 - 6");
         }
